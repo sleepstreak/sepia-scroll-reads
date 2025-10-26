@@ -3,7 +3,7 @@ import literaryBackground from '@/assets/literary-background.jpg';
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout showNavbar>
       <div className="min-h-screen flex flex-col">
         {/* Header Section */}
         <div className="py-12 px-6 text-center bg-background">

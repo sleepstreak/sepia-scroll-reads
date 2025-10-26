@@ -3,14 +3,14 @@ import { Navbar } from './Navbar';
 
 interface LayoutProps {
   children: ReactNode;
-  showBackgroundImage?: boolean;
+  showNavbar?: boolean;
 }
 
-export const Layout = ({ children, showBackgroundImage = false }: LayoutProps) => {
+export const Layout = ({ children, showNavbar = false }: LayoutProps) => {
   return (
-    <div className="min-h-screen relative bg-background">
+    <div className="min-h-screen bg-background">
+      {showNavbar && <Navbar />}
       {children}
-      <Navbar />
     </div>
   );
 };
