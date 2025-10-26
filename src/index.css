@@ -105,4 +105,33 @@ All colors MUST be HSL.
     background: linear-gradient(to bottom, rgba(247, 241, 227, 0.3), rgba(247, 241, 227, 0.5));
     pointer-events: none;
   }
+
+  /* Grayscale with low contrast and grain filter */
+  .grayscale-heavy {
+    filter: grayscale(100%) contrast(0.7) brightness(1.1);
+    position: relative;
+  }
+
+  .grayscale-heavy::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.03) 2px,
+        rgba(0, 0, 0, 0.03) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.03) 2px,
+        rgba(0, 0, 0, 0.03) 4px
+      );
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
