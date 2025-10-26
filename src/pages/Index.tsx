@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import literaryBackground from '@/assets/literary-background.jpg';
+import heroImage from '@/assets/hero-image.jpg';
 
 const Index = () => {
   return (
@@ -12,13 +12,6 @@ const Index = () => {
             <h1 className="text-xl font-serif font-light tracking-wider text-foreground">
               TND Press
             </h1>
-          </div>
-          
-          {/* Center: Motto */}
-          <div className="flex-1 text-center">
-            <p className="text-sm font-serif italic text-muted-foreground tracking-wide">
-              Nulla dies sine linea
-            </p>
           </div>
           
           {/* Right: Navigation */}
@@ -49,7 +42,7 @@ const Index = () => {
       {/* Visual Domain - 70vh with grayscale/grain filter */}
       <div className="hero-visual relative h-[70vh] w-full overflow-hidden">
         <img
-          src={literaryBackground}
+          src={heroImage}
           alt="Visual domain"
           className="w-full h-full object-cover grayscale-heavy"
         />
