@@ -46,15 +46,6 @@ const Index = () => {
           alt="Visual domain"
           className="w-full h-full object-cover grayscale-heavy"
         />
-        
-        {/* Biographical Text Block - Bottom-right */}
-        <div className="bio-text absolute bottom-8 right-8 w-[20vw] text-right">
-          <p className="text-sm font-serif leading-relaxed text-foreground/90">
-            A press dedicated to works of austere contemplation and intellectual rigor. 
-            Each publication represents a commitment to the examined life, 
-            where form and thought converge in deliberate minimalism.
-          </p>
-        </div>
       </div>
     </div>
   );
