@@ -10,9 +10,6 @@ const Index = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide text-foreground mb-3">
             TND Press
           </h1>
-          <p className="text-lg md:text-xl font-serif text-muted-foreground italic">
-            A digital reading room
-          </p>
         </div>
 
         {/* Image Section */}
