@@ -20,13 +20,13 @@ export const Navbar = () => {
     <>
       <button
         onClick={toggleMenu}
-        className="fixed top-6 right-6 z-50 p-2 rounded-sm hover:bg-primary/10 transition-smooth"
+        className="absolute top-6 right-6 z-50 p-2 rounded-sm hover:bg-primary/10 transition-smooth"
         aria-label="Toggle menu"
       >
         {isOpen ? (
-          <X className="w-6 h-6 text-foreground" />
+          <X className="w-6 h-6 text-primary" />
         ) : (
-          <Menu className="w-6 h-6 text-foreground" />
+          <Menu className="w-6 h-6 text-primary" />
         )}
       </button>
 

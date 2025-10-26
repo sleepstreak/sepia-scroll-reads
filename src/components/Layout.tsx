@@ -8,9 +8,9 @@ interface LayoutProps {
 
 export const Layout = ({ children, showBackgroundImage = false }: LayoutProps) => {
   return (
-    <div className="min-h-screen relative">
-      <Navbar />
+    <div className="min-h-screen relative bg-background">
       {children}
+      <Navbar />
     </div>
   );
 };

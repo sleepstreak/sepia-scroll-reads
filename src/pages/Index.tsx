@@ -4,26 +4,24 @@ import literaryBackground from '@/assets/literary-background.jpg';
 const Index = () => {
   return (
     <Layout>
-      <div className="min-h-screen relative overflow-hidden">
-        {/* Background image with sepia overlay */}
-        <div className="absolute inset-0 sepia-overlay">
+      <div className="min-h-screen flex flex-col">
+        {/* Header Section */}
+        <div className="py-12 px-6 text-center bg-background">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide text-foreground mb-3">
+            Writings & Manga
+          </h1>
+          <p className="text-lg md:text-xl font-serif text-muted-foreground italic">
+            A digital reading room
+          </p>
+        </div>
+
+        {/* Image Section */}
+        <div className="flex-1 relative sepia-overlay">
           <img
             src={literaryBackground}
             alt="Literary background"
             className="w-full h-full object-cover"
           />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-          <div className="text-center">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-light tracking-wide text-foreground mb-4">
-              Writings & Manga
-            </h1>
-            <p className="text-xl md:text-2xl font-serif text-muted-foreground italic">
-              A digital reading room
-            </p>
-          </div>
         </div>
       </div>
     </Layout>
