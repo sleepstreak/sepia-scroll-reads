@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
 import heroImage from '@/assets/hero-image.jpg';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Button } from '@/components/ui/button';
 
 const Index = () => {
@@ -49,15 +49,15 @@ const Index = () => {
       </header>
 
       {/* Hamburger Menu */}
-      <div className="flex justify-center py-4">
-        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
-          <SheetTrigger asChild>
+      <div className="flex flex-col items-center py-4">
+        <Collapsible open={menuOpen} onOpenChange={setMenuOpen}>
+          <CollapsibleTrigger asChild>
             <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6" />
             </Button>
-          </SheetTrigger>
-          <SheetContent side="left" className="w-64">
-            <nav className="flex flex-col gap-4 mt-8">
+          </CollapsibleTrigger>
+          <CollapsibleContent className="mt-4">
+            <nav className="flex flex-col items-center gap-4 py-4 bg-background/95 rounded-md px-8">
               <Link
                 to="/link1"
                 className="text-lg font-serif text-foreground hover:text-primary transition-smooth"
@@ -87,8 +87,8 @@ const Index = () => {
                 Link 4
               </Link>
             </nav>
-          </SheetContent>
-        </Sheet>
+          </CollapsibleContent>
+        </Collapsible>
       </div>
 
       {/* Visual Domain - 70vh with grayscale/grain filter */}
