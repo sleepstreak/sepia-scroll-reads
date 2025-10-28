@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import { useState } from 'react';
 import heroImage from '@/assets/hero-image.jpg';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="page-container min-h-screen bg-background">
       {/* Site Header - Three-part layout */}
@@ -41,6 +47,49 @@ const Index = () => {
           </nav>
         </div>
       </header>
+
+      {/* Hamburger Menu */}
+      <div className="flex justify-center py-4">
+        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <Menu className="h-6 w-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left" className="w-64">
+            <nav className="flex flex-col gap-4 mt-8">
+              <Link
+                to="/link1"
+                className="text-lg font-serif text-foreground hover:text-primary transition-smooth"
+                onClick={() => setMenuOpen(false)}
+              >
+                Link 1
+              </Link>
+              <Link
+                to="/link2"
+                className="text-lg font-serif text-foreground hover:text-primary transition-smooth"
+                onClick={() => setMenuOpen(false)}
+              >
+                Link 2
+              </Link>
+              <Link
+                to="/link3"
+                className="text-lg font-serif text-foreground hover:text-primary transition-smooth"
+                onClick={() => setMenuOpen(false)}
+              >
+                Link 3
+              </Link>
+              <Link
+                to="/link4"
+                className="text-lg font-serif text-foreground hover:text-primary transition-smooth"
+                onClick={() => setMenuOpen(false)}
+              >
+                Link 4
+              </Link>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
 
       {/* Visual Domain - 70vh with grayscale/grain filter */}
       <div className="hero-visual relative h-[70vh] w-full overflow-hidden">
