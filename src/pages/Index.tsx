@@ -7,8 +7,11 @@ const Index = () => {
       {/* Site Header - Three-part layout */}
       <header className="site-header sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
         <div className="flex items-center justify-between px-8 py-6">
-          {/* Left: Site Identity */}
-          <div className="flex-1">
+          {/* Left: Empty */}
+          <div className="flex-1"></div>
+          
+          {/* Center: Site Identity */}
+          <div className="flex-1 flex justify-center">
             <h1 className="text-xl font-serif font-light tracking-wider text-foreground">
               TND Press
             </h1>
