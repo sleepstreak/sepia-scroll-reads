@@ -56,7 +56,7 @@ const Index = () => {
               <Menu className="h-6 w-6" />
             </Button>
           </CollapsibleTrigger>
-          <CollapsibleContent className="mt-4">
+          <CollapsibleContent className="mt-4 animate-fade-in">
             <nav className="flex flex-col items-center gap-4 py-4 bg-background/95 rounded-md px-8">
               <Link
                 to="/link1"
